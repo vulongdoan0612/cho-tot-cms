@@ -14,7 +14,7 @@ const Table = dynamic(async () => await import("antd/es/table"), {
 });
 const User = () => {
   const [data, setData] = useState([]);
-  const { lastJsonMessage }: any = useWebSocket("ws://localhost:443");
+  const { lastJsonMessage }: any = useWebSocket("wss://cho-tot-be.onrender.com:443");
   useEffect(() => {
     getDataUsers();
   }, []);
