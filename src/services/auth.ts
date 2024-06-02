@@ -24,6 +24,6 @@ export const getProfileCMS = async (accessToken: string) => {
 };
 export const logout = (dispatch: any) => {
   localStorage.removeItem("access_token_cms");
-  Cookies.remove("access_token_cms", { path: "/" });
+  Cookies.remove("access_token_cms");
   dispatch(setAuthenticate({ isAuthenticated: false, account: {} }));
 };
