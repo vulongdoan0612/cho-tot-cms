@@ -8,6 +8,7 @@ import { MenuProps } from "rc-menu";
 import { useRouter } from "next/router";
 import { logout } from "@/services/auth";
 import Link from "next/link";
+import Head from "next/head";
 interface PropsPage {
   children: React.ReactNode;
   style?: any;
@@ -18,9 +19,8 @@ const Page = (props: PropsPage) => {
   const { children, style } = props;
   const dispatch = useDispatch<AppDispatch>();
   const [ske, setSke] = useState(true);
-  const { account, isAuthenticated } = useSelector((state: RootState) => state.auth);
+  const { isAuthenticated } = useSelector((state: RootState) => state.auth);
   const router = useRouter();
-  console.log(children);
   const content = useMemo(() => {
     return <>{children}</>;
   }, [children]);
@@ -55,6 +55,11 @@ const Page = (props: PropsPage) => {
   ];
   return (
     <Layout className="page" id="page" style={style}>
+      <Head>
+        <title>Admin Chợ Tốt</title>
+        <meta name="description" content="Admin Chợ Tốt" />
+        <link rel="icon" href="/icons/favicon.ico" />
+      </Head>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="demo-logo-vertical" />
         <Menu

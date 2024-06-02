@@ -7,6 +7,7 @@ import Cookies from "js-cookie";
 import { requestLogin } from "@/services/auth";
 import CustomButton from "@/components/CustomButton";
 import cookie from "cookie";
+import Head from "next/head";
 
 const Login = () => {
   const router = useRouter();
@@ -42,6 +43,11 @@ const Login = () => {
 
   return (
     <div className={`login-wrapper ${spin ? "spinning" : ""}`}>
+      <Head>
+        <title>Admin Chợ Tốt</title>
+        <meta name="description" content="Admin Chợ Tốt" />
+        <link rel="icon" href="/icons/favicon.ico" />
+      </Head>
       <ToastContainer></ToastContainer>
       <div className="modal-login">
         <div className="logo">
