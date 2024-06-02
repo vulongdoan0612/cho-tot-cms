@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import { useState } from "react";
 import Cookies from "js-cookie";
-import Link from "next/link";
 import { requestLogin } from "@/services/auth";
 import CustomButton from "@/components/CustomButton";
 import cookie from "cookie";

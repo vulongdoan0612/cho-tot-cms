@@ -1,14 +1,12 @@
 import MyButton from "@/components/basic/button";
 import Page from "@/layout/Page";
-import formatDate from "@/utils/convertDate";
-import { Button, Image, Modal, Space } from "antd";
+import { Image, Modal, Space } from "antd";
 import cookie from "cookie";
 import useWebSocket from "react-use-websocket";
 import dynamic from "next/dynamic";
 
 import { useEffect, useState } from "react";
-import { acceptCensorship, deletePost, deleteUser, getPostsCMS, getUsersCMS, refuseCensorship } from "@/services/accountList";
-// export type MyPageTableOptions<S> = ColumnsType<S>;
+import { deleteUser, getUsersCMS } from "@/services/accountList";
 const { confirm } = Modal;
 
 const Table = dynamic(async () => await import("antd/es/table"), {
