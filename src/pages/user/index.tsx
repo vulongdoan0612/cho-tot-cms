@@ -67,17 +67,20 @@ const User = () => {
     {
       title: "Avatar",
       key: "avatar",
-      render: (_: any, record: any) => (
-        <div>
-          <Image
-            src="https://cdn.chotot.com/uac2/26802657"
-            width={42}
-            height={42}
-            alt=""
-            style={{ borderRadius: "100%", objectFit: "cover" }}
-          ></Image>
-        </div>
-      ),
+      render: (_: any, record: any) => {
+        return (
+          <div>
+            <Image
+              src={record?.avatar === null ? "/images/empty-avatar.jpg" : record?.avatar}
+              width={42}
+              height={42}
+              alt=""
+              preview={false}
+              style={{ borderRadius: "100%", objectFit: "cover" }}
+            ></Image>
+          </div>
+        );
+      },
     },
     { title: "Họ tên", dataIndex: "fullname", key: "fullname" },
     {
