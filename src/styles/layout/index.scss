@@ -1,0 +1,17 @@
+.ant-layout-header {
+  display: flex;
+  justify-content: space-between;
+  .right-header {
+    width: 104px;
+    .ant-space {
+      color: #000;
+    }
+    height: 64px;
+    font-size: larger;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+.ant-layout-content {
+  min-height: 100vh;
+}
