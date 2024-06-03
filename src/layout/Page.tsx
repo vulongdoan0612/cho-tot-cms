@@ -65,7 +65,7 @@ const Page = (props: PropsPage) => {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={["1"]}
+          selectedKeys={router?.asPath === "/user" ? ["2"] : ["1"]}
           items={[
             {
               key: "1",
@@ -78,7 +78,7 @@ const Page = (props: PropsPage) => {
               label: <Link href="/user">Quản lý người dùng</Link>,
             },
           ]}
-        />
+        ></Menu>
       </Sider>
       <Layout>
         <Header style={{ padding: 0, background: colorBgContainer }}>
